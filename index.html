@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="计算巢是阿里云开放给企业应用服务商的服务管理平台。服务商能够在计算巢上发布私有化部署服务，为其客户提供云上软件一键部署的能力；同时也支持全托管模式的服务，赋能服务商托管其客户资源。">
+  <title>ThingJS-X零代码数字孪生开发平台 - Aliyun 计算巢 x 优锘科技</title>
+
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+  <link rel="stylesheet" href="css/theme.css">
+  
+
+  
+
+  
+  
+
+  
+    <script src="search/main.js"></script>
+  
+
+  
+
+  <script src="js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="nav-inner">
+        <div class="logo">
+          <img src="./img/logo-2x.png">
+        </div>
+        <div class="nav-list">
+          <ul>
+          
+              <li><a href="#thingjs-x">ThingJS-X零代码数字孪生开发平台</a></li>
+              
+                  <li><a href="#_1">概述</a></li>
+                  
+              
+                  <li><a href="#_2">计费说明</a></li>
+                  
+              
+                  <li><a href="#ram">RAM账号所需权限</a></li>
+                  
+              
+                  <li><a href="#_3">部署流程</a></li>
+                  
+                      <li class="li-h3"><a href="#_4">部署步骤</a></li>
+                  
+                      <li class="li-h3"><a href="#_5">验证结果</a></li>
+                  
+                      <li class="li-h3"><a href="#_6">使用帮助</a></li>
+                  
+              
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content theme-github">
+      
+      <div class="content-inner">        
+        
+        <h1 id="thingjs-x">ThingJS-X零代码数字孪生开发平台</h1>
+<blockquote>
+<p><strong>免责声明：</strong>本文档可能包含第三方产品信息，该信息仅供参考。阿里云对第三方产品的性能、可靠性以及操作可能带来的潜在影响，不做任何暗示或其他形式的承诺。</p>
+</blockquote>
+<h2 id="_1">概述</h2>
+<p>ThingJS-X整合了UINO（优锘）过去10年数字孪生项目交付经验，能满足75%以上物联网管理需求及100%可视化效果配置需求。ThingJS-X提供交付平台和一套覆盖全流程的工具链和资源库，实现从模型场景、数据结构、效果设置到数据对接全流程0代码配置交付，不用会编程，不用3D设计，B/S轻量化实施，合作伙伴获得完整的交付能力，100%掌控真数字孪生应用项目落地。本文向您介绍如何开通计算巢上的ThingJS-X服务，以及部署流程和使用说明。</p>
+<h2 id="_2">计费说明</h2>
+<p>ThingJS-X零代码数字孪生开发平台服务的费用如下：</p>
+<ul>
+<li>ECS实例、云盘和网络流量的费用为标准费用。</li>
+<li>云市场镜像费用：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>包年</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>38000元/年</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ram">RAM账号所需权限</h2>
+<ul>
+<li>由于该服务需要购买云市场镜像，因此您的账号需要有购买云市场镜像商品的权限。</li>
+<li>该服务需要对ECS、VPC等资源进行访问和创建操作，若您使用RAM用户创建服务实例，需要在创建服务实例前<a href="https://help.aliyun.com/document_detail/121945.html">为RAM用户授权</a>。所需权限如下表所示。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>权限策略名称</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AliyunECSFullAccess</td>
+<td>管理云服务器服务（ECS）的权限</td>
+</tr>
+<tr>
+<td>AliyunVPCFullAccess</td>
+<td>管理专有网络（VPC）的权限</td>
+</tr>
+<tr>
+<td>AliyunROSFullAccess</td>
+<td>管理资源编排服务（ROS）的权限</td>
+</tr>
+<tr>
+<td>AliyunComputeNestUserFullAccess</td>
+<td>管理计算巢服务（ComputeNest）的用户侧权限</td>
+</tr>
+<tr>
+<td>AliyunCloudMonitorFullAccess</td>
+<td>管理云监控（CloudMonitor）的权限</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">部署流程</h2>
+<h3 id="_4">部署步骤</h3>
+<ol>
+<li>
+<p>在产品界面选择您想要购买的产品
+<img alt="1.png" src="1.png" /></p>
+</li>
+<li>
+<p>点击立即购买，创建服务实例（配置信息可自定义）
+<img alt="2.png" src="2.png" />
+<img alt="3.png" src="3.png" />
+<img alt="4.png" src="4.png" /></p>
+</li>
+<li>
+<p>确认服务实例信息
+<img alt="5.png" src="5.png" /></p>
+</li>
+<li>点击确认购买并支付
+<img alt="6.png" src="6.png" /></li>
+<li>支付完成后，管理控制台
+<img alt="7.png" src="7.png" /></li>
+<li>在云市场已购买服务中看到等待状态由开通中转为已开通
+<img alt="8.png" src="8.png" /></li>
+</ol>
+<h3 id="_5">验证结果</h3>
+<ol>
+<li>选择立即进入计算巢部署
+<img alt="9.png" src="9.png" /></li>
+<li>将计算巢状态点击部署，手动部署
+<img alt="10.png" src="10.png" /></li>
+<li>部署完成后，点击ThingJS-X访问地址url，即可跳转至产品页面
+<img alt="11.png" src="11.png" /></li>
+<li>登录产品控制台（用户名：admin，密码：Thing@123）
+<img alt="12.png" src="12.png" /></li>
+<li>请复制客户识别码发送至邮箱yindirong@uino.com，我们会尽快回复授权许可码
+<img alt="13.png" src="13.png" /></li>
+</ol>
+<h3 id="_6">使用帮助</h3>
+<ul>
+<li>请访问ThingJS-X官网了解如何使用ThingJS-X：<a href="https://support.thingjs.com/">ThingJS-X使用文档</a></li>
+<li>如果您在安装或使用过程中，遇到任何问题，请致电400-051-0152，我们的工作人员会解决您的问题。</li>
+</ul>
+        
+      </div>
+
+      <div class="copyrights">© 2009-2022 Aliyun.com 版权所有</div>
+    </div>
+  </div>
+  
+  <!--
+  MkDocs version      : 1.5.3
+  Docs Build Date UTC : 2023-11-09 11:52:56.222554+00:00
+  -->
+</body>
+</html>
